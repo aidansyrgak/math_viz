@@ -1,0 +1,89 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File to Image and LaTeX</title>
+    <link rel="stylesheet" href="{% static 'latex_converter/styles.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="body_wrapper">
+        <div class="contents">
+
+            <h1><a href="{% url 'uploader' %}">MathViz</a></h1>
+            <div class="topnav">
+                <a href="{% url 'index' %}">Type</a>
+                <a href="{% url 'drawer' %}">Draw</a>
+                <a class="active" href="{% url 'uploader' %}">Upload</a>
+            </div>
+
+            <p class="short_instr">Upload or paste an image containing the equation or formula that you want to render. The output will be a formatted math image and its LaTeX.</p>
+
+            <div class="preview_wrapper">
+                <img id="image_preview">
+            </div>
+            <form method="POST" enctype="multipart/form-data" onsubmit="lockSubmit()">
+                {% csrf_token %}
+                <div class="upload_form_wrapper">
+                    <div class="upload_border">
+                        {{ form.image }}
+                        <textarea class="paste_area" placeholder="Or paste (Ctrl+V) an image into this text line..."></textarea>
+                        <button type="button" class="clear_btn" onclick="clearImage()">Clear</button>
+                    </div>
+                </div>
+                
+                <div class="submit_btn_wrapper">
+                    <button type="submit" class="submit_btn">Submit</button>
+                </div>
+            </form>
+
+            <h2>Output</h2>
+            {% if error_message %}
+                <div class="error_banner">{{ error_message }}</div>
+            {% endif %}
+
+            <p>Image:</p>
+            {% if latex_image %}
+                <div class="output_img_wrapper">
+                    <img src="data:image/png;base64,{{ latex_image }}" alt="LaTeX Image">
+                </div>
+            {% endif %}
+
+            <p>LaTeX:</p>
+            <p class="latex_output">{{ gemini_response }}</p>
+
+            <!--
+            <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+            <p>$${{ gemini_response }}$$</p>
+            -->
+        </div>
+    </div>
+    <footer>
+        <div class="footer_wrapper">
+
+            <p class="feedback">Leave any feedback or suggestions here: <a href="https://forms.gle/MLM9VT3XFYpdcirD9" target="_blank">feedback form</a></p>
+            
+            <div class="footer_table">
+                <div class="footer_column">
+                    <p>&#169 2025 Alatech Development LLC</p>
+                    <p>&#x1F582 alatechdev1@gmail.com</p>
+                    <p>Powered by Gemini</p>
+                </div>
+
+                <div class="footer_column">
+                    <p><a href="{% url 'about' %}">About</a></p>
+                    <p><a href="{% url 'legal' %}">Privacy and Terms</a></p>
+                </div>
+
+                <div class="footer_column">
+                    <p><a href="{% url 'index' %}">Text to Math</a></p>
+                    <p><a href="{% url 'drawer' %}">Drawing to Math</a></p>
+                    <p><a href="{% url 'uploader' %}">Image to Math</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'latex_converter/uploader_script.js' %}"></script>
+</body>
+</html>

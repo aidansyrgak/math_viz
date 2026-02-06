@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Response</title>
+</head>
+<body>
+    <h1>Response from Gemini</h1>
+    <p>{{ gemini_response }}</p>
+
+    <form action="{% url 'index' %}" method="get">
+        <button type="submit">Try another input</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,299 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.body_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.body_wrapper .contents {
+    background-color: #ececec;
+    width: 700px;
+    padding-top: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 1%;
+    border-radius: 20px;
+
+}
+
+h1 a {
+    text-decoration: none;
+    color:#000000;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    width: 100%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 40px;
+}
+  
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    width: 70px;
+    border: 1px solid rgb(76, 76, 76);
+    border-left-width: 0;
+}
+
+/* Prevents border overlap in nav bar */
+.topnav a:first-child {
+    border-left-width: 1px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #bcbcbc;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #bcbcbc;
+} 
+
+.short_instr {
+    margin-bottom: 25px;
+}
+
+#canvasForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mode_btn {
+    font-size: 20px;
+    width: 40px;
+    margin-bottom: 3px;
+    background-color: #e6e6e6;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(144, 144, 144);
+}
+
+.mode_btn.active {
+    background-color: #dedede;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transform: translateY(1px);
+}
+
+.submit_btn_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.output_img_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload_form_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload_border {
+    width: 420px;
+    border: 2px dashed grey;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    margin-bottom: 20px;
+}
+
+.preview_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit_btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: black;
+    padding: 12px 24px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit_btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+}
+
+.latex_output {
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    border-left: 3px solid #9f9f9f;
+    color: #5a5a5a;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+
+.text_form_control {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.image_form_control {
+    margin-bottom: 8px;
+    border: 1px solid rgb(158, 158, 158);
+    border-radius: 5px;
+    max-width: 400px;
+}
+
+.paste_area {
+    resize: none;
+    width: 390px;
+    height: 15px;
+    margin-bottom: 8px;
+}
+
+#image_preview {
+    max-width: 500px;
+    max-height: 75px;
+    margin-bottom: 5px;
+}
+
+.error_banner {
+    background-color: #ffe3e3;
+    color: #a30000;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    border: 1px solid black;
+
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_wrapper {
+    border-top: 1px solid black;
+    width: 700px;
+    padding-top: 1px;
+    padding-bottom: 10px;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-radius: 25px;
+}
+
+.footer_table {
+    width: 100%;
+    overflow: hidden;
+    align-items: flex-start;
+    justify-content: center;
+    display: flex;
+}
+
+.footer_column {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    margin-right: 10%;
+}
+
+.footer_column:first-of-type {
+    margin-right: 30%;
+}
+
+.footer_column:last-of-type {
+    margin-right: 0;
+}
+
+.feedback {
+    text-align: center;
+}
+
+.footer_table p {
+    font-size: 14px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+li {
+    margin-left: 2%
+}
+
+
+
+@media (max-width: 500px) {
+
+    .body_wrapper .contents {
+        width: 92%
+    }
+
+    #id_text_input {
+        width: 99%;
+    }
+
+    .upload_border {
+        width: 95%;
+    }
+
+    .paste_area {
+        width: 95%;
+    }
+
+    .footer_table {
+        display: block;
+    }
+
+    .footer_column {
+        width: 100%;
+        margin-right: 0%;
+        margin-bottom: 3%;
+    }
+
+    .footer_column:first-of-type {
+        margin-right: 0%;
+    }
+}

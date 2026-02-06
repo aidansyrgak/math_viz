@@ -1,0 +1,29 @@
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+*.keystore
+*secret*
+*secrets*
+*credentials*
+
+# Local-only Python artifacts (safe to ignore, not required to run)
+__pycache__/
+*.py[cod]
+
+# Local environment dirs (not needed to run elsewhere)
+.venv/
+venv/
+ENV/
+env/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
