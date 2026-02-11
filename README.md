@@ -28,14 +28,12 @@ MathViz is a Django app that turns math text or images into LaTeX using the Gemi
    ```bash
    python math_viz_backend/manage.py runserver
    ```
-6. Open `http://127.0.0.1:8000/latex_converter/`
+6. Open `http://127.0.0.1:8000/`
 
 ## Routes
-- `/latex_converter/` (type)
-- `/latex_converter/drawer/` (draw)
-- `/latex_converter/uploader/` (upload)
-- `/latex_converter/about/`
-- `/latex_converter/legal/`
+- `/drawer/` (draw)
+- `/uploader/` (upload)
+- `/about/`
 
 ## Notes
 - The Gemini model name must be available for your API key. If you see `api_error`, verify model access.
