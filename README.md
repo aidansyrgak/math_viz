@@ -1,6 +1,6 @@
 # MathViz
 
-MathViz is a small Django app that turns math text or images into LaTeX using the Gemini API, then renders the LaTeX into a PNG with Matplotlib.
+MathViz is a Django app that turns math text or images into LaTeX using the Gemini API, then renders the LaTeX into a PNG with Matplotlib.
 
 ## Features
 - Text to LaTeX and rendered image
@@ -39,4 +39,4 @@ MathViz is a small Django app that turns math text or images into LaTeX using th
 
 ## Notes
 - The Gemini model name must be available for your API key. If you see `api_error`, verify model access.
-- `.env` is ignored by git; set it up on each device.
+- `.env` is ignored by git
